@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Float Layout</title>
+<title>Flex Box</title>
 
 <script type="text/javascript">
 </script>
@@ -26,15 +26,11 @@
   }
 
   .rwd-content {
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
-  .rwd-content-left,
-  .rwd-content-body,
-  .rwd-content-right {
-    float: left;
-  }
-  
   .rwd-content-left {
     background: rgba(103, 194, 148, 1);
     width: 20%;
@@ -81,6 +77,9 @@
   }
 
   @media only screen and (max-width: 1024px) {
+    .rwd-content {
+      flex-wrap: wrap;
+    }
     .rwd-content-left {
       width: 30%;
     }
