@@ -58,13 +58,14 @@ body {
 }
 
 .rwd-content-right {
-  grid-area: 2 / 3 / 5 / 4;  /*top left bottom right*/
+  grid-column: 3;
+  grid-row: 2 / span 3;
   background: rgba(242, 164, 68, 1);
   line-height: 300px;
 }
 
 .rwd-footer {
-  grid-area: 6 / 1 / 7 / 4; 
+  grid-area: 6 / 1 / 7 / 4; /*top left bottom right*/
   background: rgba(129, 140, 148, 1);
   line-height: 100px;
 }
@@ -79,7 +80,7 @@ body {
     grid-area: 1 / 1 / 2 / 3;
   }
   .rwd-content-left {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2 / 1 / 4 / 2;
   }
   .rwd-content-bodyTop {
     grid-area: 2 / 2 / 3 / 3;
