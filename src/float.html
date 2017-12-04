@@ -7,128 +7,129 @@
 
 <style type="text/css">
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body {
-    width: 80%;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 2em;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2em;
+}
 
-  .rwd-header {
-    background: rgba(219, 111, 83, 1);
-    width: 100%;
-    height: 80px;
-    line-height: 80px; 
-    margin: 5px 0;
-  }
+.rwd-header {
+  background: rgba(219, 111, 83, 1);
+  width: 100%;
+  height: 80px;
+  line-height: 80px; 
+  margin: 5px 0;
+}
 
-  .rwd-content {
-    width: 100%;
-  }
+.rwd-content {
+  width: 100%;
+}
 
-  .rwd-content-left,
-  .rwd-content-body,
-  .rwd-content-right {
-    float: left;
-  }
-  
+.rwd-content-left,
+.rwd-content-body,
+.rwd-content-right {
+  float: left;
+}
+
+.rwd-content-left {
+  background: rgba(103, 194, 148, 1);
+  width: 20%;
+  height: 200px;
+  line-height: 200px;
+}
+
+.rwd-content-body {
+  width: 60%;
+  padding: 0 5px;
+}
+
+.rwd-content-bodyTop {
+  background: rgba(89, 167, 209, 1);
+  height: 145px;
+  line-height: 145px;
+  margin-bottom: 5px;
+}
+.rwd-content-bodyBottom {
+  background: rgba(89, 167, 209, 1);
+  height: 250px;
+  line-height: 250px;
+}
+
+.rwd-content-right {
+  background: rgba(242, 164, 68, 1);
+  height: 300px;
+  line-height: 300px;
+  width: 20%;
+}
+
+.rwd-footer {
+  background: rgba(129, 140, 148, 1);
+  width: 100%;
+  height: 100px;
+  line-height: 100px; 
+  margin: 5px 0;
+}
+
+.rwd-content::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+@media only screen and (max-width: 1024px) {
   .rwd-content-left {
-    background: rgba(103, 194, 148, 1);
-    width: 20%;
-    height: 200px;
-    line-height: 200px;
+    width: 30%;
+  }
+  .rwd-content-body {
+    width: 70%;
+  }
+  .rwd-content-right {
+    width: 100%;
+    margin-top: 5px;
+    height: 100px;
+    line-height: 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="rwd-content-"] {
+    width: 100%;
   }
 
   .rwd-content-body {
-    width: 60%;
-    padding: 0 5px;
+    padding: 0;
   }
-
   .rwd-content-bodyTop {
-    background: rgba(89, 167, 209, 1);
-    height: 145px;
-    line-height: 145px;
-    margin-bottom: 5px;
+    margin-top: 5px;
   }
   .rwd-content-bodyBottom {
-    background: rgba(89, 167, 209, 1);
-    height: 250px;
-    line-height: 250px;
+    margin-Bottom: 5px;
   }
-
   .rwd-content-right {
-    background: rgba(242, 164, 68, 1);
-    height: 300px;
-    line-height: 300px;
-    width: 20%;
+    margin-top: 0;
   }
-
-  .rwd-footer {
-    background: rgba(129, 140, 148, 1);
-    width: 100%;
-    height: 100px;
-    line-height: 100px; 
-    margin: 5px 0;
-  }
-
-  .rwd-content::after {
-    content: "";
-    clear: both;
-    display: block;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    .rwd-content-left {
-      width: 30%;
-    }
-    .rwd-content-body {
-      width: 70%;
-    }
-    .rwd-content-right {
-      width: 100%;
-      margin-top: 5px;
-      height: 100px;
-      line-height: 100px;
-    }
-  }
-
-  @media only screen and (max-width: 700px) {
-    [class*="rwd-content-"] {
-      width: 100%;
-    }
-
-    .rwd-content-body {
-      padding: 0;
-    }
-    .rwd-content-bodyTop {
-      margin-top: 5px;
-    }
-    .rwd-content-bodyBottom {
-      margin-Bottom: 5px;
-    }
-    .rwd-content-right {
-      margin-top: 0;
-    }
-  }
+}
 
 </style>
-
 </head>
 
 <body >
-  <div class="rwd-header">Header</div>
-  <div class="rwd-content">
-    <div class="rwd-content-left">Left</div>
-    <div class="rwd-content-body">
-      <div class="rwd-content-bodyTop">Top Content</div>
-      <div class="rwd-content-bodyBottom">Bottom Content</div>
-    </div>
-    <div class="rwd-content-right">Right</div>
+
+<div class="rwd-header">Header</div>
+<div class="rwd-content">
+  <div class="rwd-content-left">Left</div>
+  <div class="rwd-content-body">
+    <div class="rwd-content-bodyTop">Top Content</div>
+    <div class="rwd-content-bodyBottom">Bottom Content</div>
   </div>
-  <div class="rwd-footer">Footer</div>
+  <div class="rwd-content-right">Right</div>
+</div>
+<div class="rwd-footer">Footer</div>
+
 </body>
 
 </html>

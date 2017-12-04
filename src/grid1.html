@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>Grid Layout</title>
+
+<script type="text/javascript">
+</script>
+
+<style type="text/css">
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2em;
+}
+
+.rwd-grid {
+  display: grid;
+  grid-gap: 5px;
+  margin: 5px 0;
+  width: 100%;
+  grid-template-areas: "header header header"
+                        "left   top    right"
+                        "left   bottom right"
+                        ".      bottom right"
+                        ".      bottom ."
+                        "footer footer footer";
+  grid-template-rows: 80px 150px 50px 100px 100px 100px;
+  grid-template-columns: 20% 60% 20%;
+}
+
+.rwd-header {
+  grid-area: header;
+  background: rgba(219, 111, 83, 1);
+  line-height: 80px; 
+}
+
+.rwd-content-left {
+  grid-area: left;
+  background: rgba(103, 194, 148, 1);
+  line-height: 200px;
+}
+
+.rwd-content-bodyTop {
+  grid-area: top;
+  background: rgba(89, 167, 209, 1);
+  line-height: 145px;
+}
+
+.rwd-content-bodyBottom {
+  grid-area: bottom;
+  background: rgba(89, 167, 209, 1);
+  line-height: 250px;
+}
+
+.rwd-content-right {
+  grid-area: right;
+  background: rgba(242, 164, 68, 1);
+  line-height: 300px;
+}
+
+.rwd-footer {
+  grid-area: footer;
+  background: rgba(129, 140, 148, 1);
+  line-height: 100px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .rwd-grid {
+    grid-template-areas: "header header"
+                          "left   top"
+                          "left   bottom"
+                          ".      bottom"
+                          "right  right"
+                          "footer footer";
+    grid-template-rows: 80px 150px 50px 200px 100px 100px;
+    grid-template-columns: 30% 70%;
+  }
+
+  .rwd-content-right {
+    line-height: 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .rwd-grid {
+    grid-template-areas: "header"
+                          "left"
+                          "top"
+                          "bottom"
+                          "right"
+                          "footer";
+    grid-template-rows: 80px 200px 150px 250px 100px 100px;
+    grid-template-columns: 100%;
+  }
+
+  .rwd-content-right {
+    line-height: 100px;
+  }
+}
+
+/*
+@media only screen and (max-width: 1024px) {
+  .rwd-grid {
+    grid-template-areas: "header header"
+                          "top    right"
+                          "bottom left"
+                          "footer footer";
+    grid-template-rows: 80px 150px 250px 100px;
+    grid-template-columns: 70% 30%;
+  }
+
+  .rwd-content-left {
+    line-height: 250px;
+  }
+  .rwd-content-right {
+    line-height: 150px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .rwd-grid {
+    grid-template-areas: "header"
+                          "top"
+                          "bottom"
+                          "left"
+                          "right"
+                          "footer";
+    grid-template-rows: 80px 150px 250px 200px 100px 100px;
+    grid-template-columns: 100%;
+  }
+
+  .rwd-content-right {
+    line-height: 100px;
+  }
+}
+*/
+
+</style>
+</head>
+
+<body >
+
+<div class="rwd-grid">
+  <div class="rwd-header">Header</div>
+  <div class="rwd-content-left">Left</div>
+  <div class="rwd-content-bodyTop">Top Content</div>
+  <div class="rwd-content-bodyBottom">Bottom Content</div>
+  <div class="rwd-content-right">Right</div>
+  <div class="rwd-footer">Footer</div>
+</div>
+
+</body>
+
+</html>
